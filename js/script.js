@@ -22,7 +22,8 @@ const users = [{
    "balance": "$3,976.41",
    "name": "Middleton Chaney",
    "gender": "male",
-   "phone": "+1 (995) 591-2478", "address": "807 Fleet Walk, Brutus, Arkansas, 9783"
+   "phone": "+1 (995) 591-2478",
+   "address": "807 Fleet Walk, Brutus, Arkansas, 9783"
 },
 {
    "index": 3,
@@ -55,9 +56,9 @@ const users = [{
 const arrNumber = [];
 
 for (let i = 0; i < users.length; i++) {
-   const balance = Number(users[i].balance.slice(1).replace(",", "")).toFixed(2);
+   const balance = Number(users[i].balance.slice(1).replace(",", ""));
    if (balance > 2000) {
-      arrNumber.push(balance)
+      arrNumber.push(users[i].phone)
    }
 }
 console.log(arrNumber);
